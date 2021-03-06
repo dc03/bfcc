@@ -1,3 +1,5 @@
+/* Copyright (C) 2021 Dhruv Chawla */
+/* See LICENSE at project root for license details */
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>

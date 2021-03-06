@@ -1,6 +1,9 @@
 #ifndef PARSE_H
 #define PARSE_H
 
+/* Copyright (C) 2021 Dhruv Chawla */
+/* See LICENSE at project root for license details */
+
 #include <stdint.h>
 #include <stdio.h>
 

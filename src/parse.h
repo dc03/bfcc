@@ -1,13 +1,20 @@
+#ifndef PARSE_H
+#define PARSE_H
+
 #include <stdint.h>
 #include <stdio.h>
 
 enum TokenType {
-	LEFT_IND, RIGHT_IND, LEFT_ANGLE, RIGHT_ANGLE, PLUS, MINUS, READ, WRITE
+	LEFT_IND, RIGHT_IND, LEFT_ANGLE, RIGHT_ANGLE,
+	INCREMENT, DECREMENT, READ, WRITE, END_OF_FILE, NONE
 };
 
-struct Token {
-	enum TokenType type;
-	size_t byte;
+struct TokenStream {
+	enum TokenType *toks;
+	size_t length;
+	size_t capacity;
 };
 
-struct Token *parse(FILE *source);
+struct TokenStream parse(FILE *source);
+
+#endif // parse.h

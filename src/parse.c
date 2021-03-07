@@ -48,7 +48,7 @@ static size_t find_loop_end(struct TokenStream *stream, size_t where) {
 static void check(struct TokenStream *stream) {
     for (size_t i = 0; i < stream->length; i++) {
         if (stream->toks[i] == LEFT_IND) {
-            i += find_loop_end(stream, i);
+            i = find_loop_end(stream, i);
         } else if (stream->toks[i] == RIGHT_IND) {
             halt(stream, "extra loop end (']') in input");
         }
